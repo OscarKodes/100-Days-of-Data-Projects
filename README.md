@@ -6,6 +6,8 @@ The purpose is to practice data analysis, machine learning, creating dashboards,
 
 I aim to do at least one of the following each day:
 
+- Data collection/scraping
+
 - Data cleaning and preparation
 
 - Exploratory Data Analysis

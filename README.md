@@ -2,7 +2,7 @@
 
 This is a daily goal where I will work on data projects for 100 days. The best projects at the end will be added to my portfolio.
 
-Everyday I aim to do at least one of the following:
+I aim to do at least one of the following each day
 
 - Data cleaning and preperation
 

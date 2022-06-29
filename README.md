@@ -4,7 +4,7 @@ This is a daily goal where I will work on data projects for 100 days. The best p
 
 I aim to do at least one of the following each day:
 
-- Data cleaning and preperation
+- Data cleaning and preparation
 
 - Exploratory Data Analysis
 

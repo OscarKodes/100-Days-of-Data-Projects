@@ -18,3 +18,20 @@ I aim to do at least one of the following each day:
 
 - Video presentation of analysis
 
+---
+
+### Day 1 - June 30th, 2022
+
+**Tasks Done**
+
+- Decided on two research topics
+
+	- Classification: Given a Pokemon's features of base stats, experience requirements, catch rate, height, weight, and generation number, could we reliably classify if that Pokemon's Primary Type is "Dragon?"
+	
+	- Regression: Can we create a regression model that predicts a Pokemon's HP stat?
+
+- Cleaned and prepared Pokemon data
+
+	- Standardized continuous variables
+	
+	- One-hot encoded catgorical variables

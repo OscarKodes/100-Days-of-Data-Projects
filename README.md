@@ -26,11 +26,13 @@ I aim to do at least one of the following each day:
 
 - Decided on two research topics
 
-	- Classification: Given a Pokemon's features of base stats, experience requirements, catch rate, height, weight, and generation number, could we reliably classify if that Pokemon's Primary Type is "Dragon?"
+	- Classification: Given a Pokemon's features of base stats, experience requirements, catch rate, height, weight, and generation number, could we reliably classify if a Pokemon is a Dragon Type?
 	
 	- Regression: Can we create a regression model that predicts a Pokemon's HP stat?
 
 - Cleaned and prepared Pokemon data
+
+    - Removed Mega evolutions because they might have different stats
 
 	- Standardized continuous variables
 	

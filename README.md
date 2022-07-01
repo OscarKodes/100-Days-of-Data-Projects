@@ -32,8 +32,28 @@ I aim to do at least one of the following each day:
 
 - Cleaned and prepared Pokemon data
 
-    - Removed Mega evolutions because they might have different stats
+---
 
-	- Standardized continuous variables
-	
-	- One-hot encoded catgorical variables
+### Day 2 - July 1st, 2022
+
+**Tasks Done**
+
+- Exploratory Data Analysis with Visualization
+
+- Pricipal Component Analysis (Unsupervised)
+
+    - For analysis and dimensionality reduction
+
+- Gradient Boosted Decision Tree (Supervised Classification)
+
+    - Model testing and feature selection (using feature importance)
+    
+- Decision Tree (Supervised Classification)
+
+- GridSearchCV
+
+    - Optimized model parameters with grid search, but decided to remove them after realizing the optimized models where only predicting "0" for isDragon.
+    
+    - Must be careful with datasets that are imbalanced. Models might just end up guessing for the majority class to get "accurate" guesses.
+    
+    - Avoid by checking the prediction results and making sure that more than one class is being outputted.

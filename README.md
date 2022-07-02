@@ -57,3 +57,21 @@ I aim to do at least one of the following each day:
     - Must be careful with datasets that are imbalanced. Models might just end up guessing for the majority class to get "accurate" guesses.
     
     - Avoid by checking the prediction results and making sure that more than one class is being outputted.
+    
+---
+
+### Day 3 - July 2nd, 2022
+
+**Tasks Done**
+
+- Built more classification models
+
+    - KNN, Random Forest, Linear SVM, Kernel SVM, Logistic Regression
+    
+- Optimized parameters with GridSearchCV
+
+- Compared models with Confusion Matrices and Evaluation Metrics
+
+- Selected the best model
+
+- Visualized the test set results and model predictions

@@ -75,3 +75,21 @@ I aim to do at least one of the following each day:
 - Selected the best model
 
 - Visualized the test set results and model predictions
+
+---
+
+### Day 4 - July 3rd, 2022
+
+**Tasks Done**
+
+- Prepared Pokemon data for Pokemon HP Regression
+
+- Exploratory Data Analysis for Pokemon HP Regression
+    
+- Experimented with Linear Regression, Ridge Regression, and Lasso Regression to predict Pokemon HP
+
+    - Conducted GridSearchCV on Ridge and Lasso to find the best parameters.
+
+    - The best regression model was Ridge with alpha = 20. 
+    
+    - Test set accuracy of 0.52. 

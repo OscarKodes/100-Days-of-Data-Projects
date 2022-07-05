@@ -1,6 +1,5 @@
 # Pokemon Classification and Regression
 
----
 
 This is a project where I perform classification and regression on a Pokemon dataset from Kaggle.
 

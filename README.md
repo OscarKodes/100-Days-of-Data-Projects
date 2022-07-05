@@ -93,3 +93,15 @@ I aim to do at least one of the following each day:
     - The best regression model was Ridge with alpha = 20. 
     
     - Test set accuracy of 0.52. 
+
+---
+
+### Day 5 - 6 - July 4th - 5th, 2022
+
+**Tasks Done**
+
+- Prepared slides for presenting Pokemon classification and regression.
+
+- Recorded and uploaded presentation.
+
+    - https://www.youtube.com/watch?v=bC76RKInAc8

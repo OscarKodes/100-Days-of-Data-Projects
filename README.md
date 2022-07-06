@@ -105,3 +105,21 @@ I aim to do at least one of the following each day:
 - Recorded and uploaded presentation.
 
     - https://www.youtube.com/watch?v=bC76RKInAc8
+    
+---
+
+### Day 7 - July 6th, 2022
+
+**Tasks Done**
+
+- Planned a dashboard for analyzing business profit
+
+- Created a dashboard in Tableau for these steps:
+
+    - Step 1: Select Year
+    
+    - Step 2: Select Region / Month
+    
+    - Step 3: Select State
+    
+    - Step 4: Examine Profits of Products

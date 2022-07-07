@@ -123,3 +123,15 @@ I aim to do at least one of the following each day:
     - Step 3: Select State
     
     - Step 4: Examine Profits of Products
+
+---
+
+### Day 8 - July 7th, 2022
+
+**Tasks Done**
+
+- Polished up Profit Analysis Dashboard
+
+- Uploaded to Public Tableau: 
+
+    - https://public.tableau.com/app/profile/oscar1115/viz/ProfitAnalysisin4EasySteps/Dashboard

@@ -135,3 +135,14 @@ I aim to do at least one of the following each day:
 - Uploaded to Public Tableau: 
 
     - https://public.tableau.com/app/profile/oscar1115/viz/ProfitAnalysisin4EasySteps/Dashboard
+    
+---
+
+### Day 9 - 11 - July 8 - 10, 2022
+
+**Tasks Done**
+
+- Organized machine learning notes and pdfs
+- Gathered Python Notebooks into a machine learning toolkit
+- Gathered R files into a machine learning toolkit
+

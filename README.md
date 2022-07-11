@@ -146,3 +146,12 @@ I aim to do at least one of the following each day:
 - Gathered Python Notebooks into a machine learning toolkit
 - Gathered R files into a machine learning toolkit
 
+---
+
+### Day 12 - July 11, 2022
+
+**Tasks Done**
+
+- Sucessfully queried stock data from HotStocks API using SQL and Python
+
+- Sucessfully converted incoming JSON string into a Pandas data frame

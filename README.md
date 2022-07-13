@@ -155,3 +155,20 @@ I aim to do at least one of the following each day:
 - Sucessfully queried stock data from HotStocks API using SQL and Python
 
 - Sucessfully converted incoming JSON string into a Pandas data frame
+
+---
+
+### Day 13 - July 12th, 2022
+
+**Tasks Done**
+
+- Planned order of projects to be done and skills to practice
+
+---
+
+### Day 14 - July 13th, 2022
+
+**Tasks Done**
+
+- Did half of a DataCamp guided SQL project on videogame sales.
+

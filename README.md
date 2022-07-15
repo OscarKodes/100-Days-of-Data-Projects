@@ -172,3 +172,18 @@ I aim to do at least one of the following each day:
 
 - Did half of a DataCamp guided SQL project on videogame sales.
 
+---
+
+### Day 15 - July 14th, 2022
+
+**Tasks Done**
+
+- Conducted Exploratory Analysis on the Texas Housing dataset.
+
+---
+
+### Day 16 - July 15th, 2022
+
+**Tasks Done**
+
+- Conducted data preperation, cleaning, and feature scaling, on the Texas Housing dataset.

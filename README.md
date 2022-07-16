@@ -187,3 +187,15 @@ I aim to do at least one of the following each day:
 **Tasks Done**
 
 - Conducted data preperation, cleaning, and feature scaling, on the Texas Housing dataset.
+
+---
+
+### Day 17 - July 16th, 2022
+
+**Tasks Done**
+
+- Ran Linear Regression, Ridge Regression, and Lasso Regression models
+- Conducted automated backwards elimination
+- Conducted PCA
+- Conducted backwards elimination on PCA components
+- Compared models with different features and components

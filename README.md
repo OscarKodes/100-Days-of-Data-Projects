@@ -208,3 +208,6 @@ I aim to do at least one of the following each day:
 
 - SQL Videogame Sales and Ratings Analysis
 
+- Analyzed best regression model for housing price prediction
+
+- Considered future improvements for future regression projects

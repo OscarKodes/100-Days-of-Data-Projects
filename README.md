@@ -199,3 +199,12 @@ I aim to do at least one of the following each day:
 - Conducted PCA
 - Conducted backwards elimination on PCA components
 - Compared models with different features and components
+
+---
+
+### Day 18 - July 17th, 2022
+
+**Tasks Done**
+
+- SQL Videogame Sales and Ratings Analysis
+

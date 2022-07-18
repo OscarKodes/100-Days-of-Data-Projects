@@ -211,3 +211,13 @@ I aim to do at least one of the following each day:
 - Analyzed best regression model for housing price prediction
 
 - Considered future improvements for future regression projects
+
+---
+
+### Day 19 - July 18th, 2022
+
+**Tasks Done**
+
+- Polish up Texas housing notebook and add cover image
+
+- Create a copy and use it for regression template creation

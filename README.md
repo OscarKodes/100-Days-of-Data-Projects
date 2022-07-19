@@ -221,3 +221,13 @@ I aim to do at least one of the following each day:
 - Polish up Texas housing notebook and add cover image
 
 - Create a copy and use it for regression template creation
+
+---
+
+### Day 20 - July 19th, 2022
+
+**Tasks Done**
+
+- Fix order of Texas housing models for a more organized process
+
+- Update regression template code

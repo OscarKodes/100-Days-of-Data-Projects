@@ -231,3 +231,11 @@ I aim to do at least one of the following each day:
 - Fix order of Texas housing models for a more organized process
 
 - Update regression template code
+
+---
+
+### Day 21 - July 20th, 2022
+
+**Tasks Done**
+
+- SQL Popular Baby Name Analysis (Start)

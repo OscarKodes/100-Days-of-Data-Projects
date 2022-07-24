@@ -256,4 +256,7 @@ I aim to do at least one of the following each day:
 **Tasks Done**
 
 - SQL Popular Baby Name Analysis (Continue)
+
 - Create presentation video for Austin Housing Price Regression.
+
+    - https://youtu.be/bC76RKInAc8

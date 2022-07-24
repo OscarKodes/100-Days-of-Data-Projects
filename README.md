@@ -248,3 +248,12 @@ I aim to do at least one of the following each day:
 
 - SQL Popular Baby Name Analysis (Continue)
 - Prepare presentation and slides for Austin Housing Prices
+
+---
+
+### Day 25 July 24, 2022
+
+**Tasks Done**
+
+- SQL Popular Baby Name Analysis (Continue)
+- Create presentation video for Austin Housing Price Regression.

@@ -239,3 +239,12 @@ I aim to do at least one of the following each day:
 **Tasks Done**
 
 - SQL Popular Baby Name Analysis (Start)
+
+---
+
+### Day 22 - 24 July 21-23, 2022
+
+**Tasks Done**
+
+- SQL Popular Baby Name Analysis (Continue)
+- Prepare presentation and slides for Austin Housing Prices

@@ -260,3 +260,13 @@ I aim to do at least one of the following each day:
 - Create presentation video for Austin Housing Price Regression.
 
     - https://youtu.be/bC76RKInAc8
+
+---
+
+### Day 26 July 25, 2022
+
+**Tasks Done**
+
+- SQL Popular Baby Name Analysis (Finish)
+
+- Austin Housing Prices Dashboard (Start)

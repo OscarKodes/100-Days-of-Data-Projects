@@ -270,3 +270,12 @@ I aim to do at least one of the following each day:
 - SQL Popular Baby Name Analysis (Finish)
 
 - Austin Housing Prices Dashboard (Start)
+
+
+---
+
+### Day 27-29 July 25-28, 2022
+
+**Tasks Done**
+
+- Austin Housing Prices Dashboard, clean and prepare data for tableau, create preliminary visses

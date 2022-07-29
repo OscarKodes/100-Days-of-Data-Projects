@@ -279,3 +279,17 @@ I aim to do at least one of the following each day:
 **Tasks Done**
 
 - Austin Housing Prices Dashboard, clean and prepare data for tableau, create preliminary visses
+
+---
+
+### Day 30 July 29, 2022
+
+**Tasks Done**
+
+- Austin Housing Prices Dashboard
+
+    - Design dashboard
+    - Create house background image
+    - Assemble barcharts as rooms
+    - Place choropleth map at the side
+    - Format labels and add textbox titles

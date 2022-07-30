@@ -293,3 +293,18 @@ I aim to do at least one of the following each day:
     - Assemble barcharts as rooms
     - Place choropleth map at the side
     - Format labels and add textbox titles
+    
+---
+
+### Day 31 July 30, 2022
+
+**Tasks Done**
+
+- Austin Housing Prices Dashboard Finish
+
+    - Format tooltips
+    - Add click to filter functionality
+    - Add data source and description
+    - Add portfolio link
+    - Upload to public tableau
+    - https://public.tableau.com/app/profile/oscar1115/viz/AustinTexasHousingPrices/Dashboard1

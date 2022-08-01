@@ -5,7 +5,7 @@ This is a project where I perform regression on a Housing dataset from Kaggle.
 
 My jupyter notebooks with records of my analysis steps are in this repository.
 
-Presentation Video: https://youtu.be/bC76RKInAc8
+Presentation Video: https://youtu.be/ww0HkAsmV60
 
 Dataset Source: https://www.kaggle.com/datasets/ericpierce/austinhousingprices
 

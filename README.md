@@ -259,7 +259,7 @@ I aim to do at least one of the following each day:
 
 - Create presentation video for Austin Housing Price Regression.
 
-    - https://youtu.be/bC76RKInAc8
+    - https://youtu.be/ww0HkAsmV60
 
 ---
 

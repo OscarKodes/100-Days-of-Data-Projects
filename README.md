@@ -311,9 +311,18 @@ I aim to do at least one of the following each day:
     
 ---
 
-### Day 32 - 33 Aug 1-2, 2022
+### Day 32 - 33 - Aug 1-2, 2022
 
 **Tasks Done**
 
 - Arrange all projects onto portfolio website
 - SQL Analysis of Country Debt Data (Start)
+
+---
+
+### Day 34 - Aug 3, 2022
+
+**Tasks Done**
+
+- SQL Analysis of Country Debt Data (Continued)
+- Explore scraping Reddit comments and posts with Python and PRAW.

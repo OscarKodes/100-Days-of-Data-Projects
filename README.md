@@ -326,3 +326,12 @@ I aim to do at least one of the following each day:
 
 - SQL Analysis of Country Debt Data (Continued)
 - Explore scraping Reddit comments and posts with Python and PRAW.
+
+---
+
+### Day 35 - Aug 4, 2022
+
+**Tasks Done**
+
+- Scraped records of writingprompts from reddit and exported the dataframe to CSV.
+- Planned next steps for NLP project.

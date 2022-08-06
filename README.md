@@ -335,3 +335,11 @@ I aim to do at least one of the following each day:
 
 - Scraped records of writingprompts from reddit and exported the dataframe to CSV.
 - Planned next steps for NLP project.
+
+---
+
+### Day 36 - 37 - Aug 5-6, 2022
+
+**Tasks Done**
+
+- Import scraped text data from subreddit "WritingPrompts" and cleaned the data in R

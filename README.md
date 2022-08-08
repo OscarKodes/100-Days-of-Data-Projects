@@ -343,3 +343,13 @@ I aim to do at least one of the following each day:
 **Tasks Done**
 
 - Import scraped text data from subreddit "WritingPrompts" and cleaned the data in R
+
+
+---
+
+### Day 38 - 39 - Aug 7 - 8, 2022
+
+**Tasks Done**
+
+- Finish SQL Analysis of Country Debts
+- Perform NLP Topic analysis and Sentiment analysis on WritingPrompts data.

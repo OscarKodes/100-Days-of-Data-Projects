@@ -353,3 +353,12 @@ I aim to do at least one of the following each day:
 
 - Finish SQL Analysis of Country Debts
 - Perform NLP Topic analysis and Sentiment analysis on WritingPrompts data.
+
+---
+
+### Day 40 - Aug 9, 2022
+
+**Tasks Done**
+
+- Experiment on NLP topic analysis with different K values and stopwords. 
+- Export CSVs for visualizing topic analysis and sentiment analysis.

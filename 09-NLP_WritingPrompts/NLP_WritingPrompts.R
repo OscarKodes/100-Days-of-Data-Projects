@@ -1,8 +1,9 @@
 ###################################################
-# NLP - WritingPrompts
+# NLP - SUBREDDIT WRITING PROMPTS
 
 
-# Libraries -------------------------------
+###################################################
+# IMPORT LIBRARIES
 
 #to create and work with corpora
 library(tm)
@@ -20,7 +21,8 @@ library(data.table)
 library(dplyr)
 
 
-# Setup Directory -------------------------
+###################################################
+# SETUP DIRECTORY
 
 # Clear R's memory.
 rm(list=ls())
@@ -43,10 +45,6 @@ list.files()
 library(vroom)
 data <- vroom("WritingPrompts_data.csv")
 
-# data <- read.csv("WritingPrompts_data.csv",
-#                  header = T,
-#                  stringsAsFactors = F,
-#                  encoding = "utf-8")
 
 ###################################################
 # CHECK THE DATA 
@@ -75,8 +73,9 @@ missmap(data,
         legend = T)
 
 
-# -----------------------------------------
-# Remove all columns except Title
+
+###################################################
+# KEEP ONLY RELEVANT COLUMNS
 
 library(tidyverse)
 title_df <- select(data, id, title, score, num_comments, url, created)
@@ -87,11 +86,12 @@ missmap(title_df,
         legend = T)
 
 head(title_df)
-tail
 
 
-# ----------------------------------------
-# Seperate all prompt tags and titles
+###################################################
+# DATA CLEANING
+
+# Separate titles into tags and prompts ------------
 
 tags <- c()
 prompts <- c()
@@ -116,8 +116,8 @@ head(title_df)
 
 unique(title_df$tag)
 
-# -----------------------------------
-# Clean the data
+
+# Fix a row anomoly -----------------------------------------------
 
 error_tag <- " man who sees ghosts checks himself into a mental institution, oblivious to the fact that the facility has been closed for almost thirty years. [WP"
 
@@ -135,7 +135,8 @@ title_df <- rbind(title_df, c(the_title, the_tag, the_prompt))
 
 tail(title_df)
 
-# Keep only standard [WP] posts. Filter out everything else.
+
+# Keep only standard [WP] posts. Filter out everything else. --------
 
 unique(title_df$tag)
 
@@ -145,20 +146,30 @@ unique(title_df$tag)
 
 nrow(title_df)
 
-# ---------------------------------------------------
-# Create dataframe of only prompts 
+
+# Create prompts dataframe ------------------------------------------
 
 prompt_df <- select(title_df, id, prompt, score, num_comments, url, created)
 
 head(prompt_df)
 tail(prompt_df)
 
+write.csv(prompt_df,
+          file = paste("cleaned_prompt_df"
+                       ".csv",
+                       sep = ""))
 
 
 ##############################################################
-# CREATE CORPUS ------------------------------
+##############################################################
+# NLP SECTIONS
 
-# CREATE DOCUMENT ID -------------------
+
+##############################################################
+# CREATE CORPUS 
+
+
+# create document id -------------------
 
 # note: for some reason this is quotes sensitive, 
 # use double quotes
@@ -169,7 +180,7 @@ names(prompt_df)[names(prompt_df)=="prompt"] <- "text"
 colnames(prompt_df)
 
 
-# CREATE CORPUS ------------------------------
+# create corpus ------------------------------
 
 
 # calling DataframeSource to save metadata,
@@ -186,7 +197,7 @@ prompt_corpus[[10]][2] # the metadata of document 10
 
 
 
-# CLEANING CORPUS ----------------------
+# clean the corpus ----------------------
 
 # Remove punctuation
 prompt_cleaned <- tm_map(prompt_corpus, removePunctuation)
@@ -198,7 +209,8 @@ prompt_cleaned <- tm_map(prompt_cleaned, removeNumbers)
 prompt_cleaned <- tm_map(prompt_cleaned, content_transformer(tolower))
 
 # Remove stop words
-my_stops <- c(stopwords("en"))
+my_stops <- c(stopwords("en"),
+              "just", "can", "like")
 
 prompt_cleaned <- tm_map(prompt_cleaned, removeWords, my_stops)
 
@@ -216,8 +228,8 @@ prompt_cleaned[[3]][1]
 
 
 
-###################################################
-###################################################
+
+#########################################################################
 # TOPIC MODELING (DOCUMENT TERM MATRIX)
 
 prompt_dtm <- DocumentTermMatrix(prompt_cleaned)
@@ -225,7 +237,7 @@ prompt_dtm
 
 # Sparse entries are 0's, so a specific term does 
 # not occur in that document.
-# There are about 30,613 unique words across our documents.
+# There are about 5,853 unique words across our documents.
 # They don't appear in every document.
 
 # a little more cleaning to remove empty rows
@@ -240,11 +252,12 @@ prompt_dtm_tidy <- tidy(prompt_dtm)
 prompt_dtm_tidy 
 
 
-# LDA ANALYSIS ------------
+# LDA ANALYSIS ------------------------------------
+
 # k is the number of topics we want
 # (like k means clustering?)
 
-k <- 5
+k <- 3
 
 # NOTE: Optimal k varies, so you'll need to experiment
 # with which k value is best.
@@ -253,6 +266,7 @@ prompt_lda <- LDA(prompt_dtm,
                  k = k, 
                  control = list(seed=42)) 
 prompt_lda
+
 # NOTE: seed keeps randomization consistent
 
 # get the words out of our LDA
@@ -273,8 +287,8 @@ prompt_lda_words
 prompt_lda_topics <- as.matrix(prompt_lda_words)
 
 # write.csv(prompt_lda_topics,
-#           file = paste("prompt_LDA_", 
-#                        k, 
+#           file = paste("prompt_LDA_",
+#                        k,
 #                        ".csv",
 #                        sep = ""))
 
@@ -282,6 +296,8 @@ prompt_lda_topics <- as.matrix(prompt_lda_words)
 # with different k's
 
 
+
+# Examine the topics  --------------
 
 head(prompt_lda_topics)
 
@@ -313,65 +329,9 @@ top_terms %>%
   coord_flip()
 
 
-# Create a Function that is Portable to other places ---
-
-get_LDA_topics_terms_by_topic <- 
-  function(input_corpus, 
-           plot = TRUE, 
-           number_of_topics = 5, # = creates default value
-           number_of_words = 5, 
-           path = getwd())
-  {
-    my_dtm <- DocumentTermMatrix(input_corpus)
-    
-    unique_indexes <- unique(my_dtm$i)
-    
-    my_dtm <- my_dtm[unique_indexes,]
-    
-    my_lda <- LDA(my_dtm, 
-                  k = number_of_topics, 
-                  control = list(seed=42))
-    
-    my_topics <- tidy(my_lda, matrix="beta")
-    
-    my_lda_words <- terms(my_lda, number_of_words)
-    
-    my_lda_topics <- as.matrix(my_lda_words)
-    
-    write.csv(my_lda_topics, file=paste(path,
-                                        "/lda_topics_k_",
-                                        number_of_topics,
-                                        ".csv",
-                                        sep = ""))
-    
-    my_top_terms <- my_topics %>%
-      group_by(topic) %>%
-      top_n(number_of_words, beta) %>%
-      ungroup() %>%
-      arrange(topic, -beta)
-    
-    if(plot==TRUE){
-      my_top_terms %>%
-        mutate(term = reorder(term, beta)) %>%
-        ggplot(aes(term, beta, fill=factor(topic))) +
-        geom_col(show.legend=FALSE) +
-        facet_wrap(~ topic, scales = "free")+
-        coord_flip()
-    }
-    
-    else{
-      return(my_top_terms)
-    }
-  }
-
-# # use function to conduct LDA quickly with 
-# # different numbers of topics and words
-# get_LDA_topics_terms_by_topic(prompt_cleaned,
-#                               number_of_topics = 4,
-#                               number_of_words = 4)
-
 
 # GAMMA -------------
+
 # How much does each topic contribute to each document?
 # --> Use GAMMA statistic
 # (As opposed to how much each word contributes 
@@ -381,9 +341,10 @@ prompt_lda_document_topics <- tidy(prompt_lda,
                                   matrix="gamma")
 
 head(prompt_lda_document_topics)
+tail(prompt_lda_document_topics)
 
 # write.csv(prompt_lda_document_topics,
-#           file = paste("prompt_LDA_document_topics_",
+#           file = paste("prompt_topic_gamma_match",
 #                        k,
 #                        ".csv",
 #                        sep = ""))
@@ -391,7 +352,9 @@ head(prompt_lda_document_topics)
 # same as nrow() and ncol()
 dim(prompt_lda_document_topics)
 
-# Have each topic as a different column
+
+# Have each topic as a different column --------------
+
 # Ex: topic1, topic2, topic3
 # As opposed to one topic column
 # NOTE: gamma values are to fill in the new columns
@@ -402,15 +365,19 @@ dim(prompt_lda_document)
 head(prompt_lda_document)
 
 
+# Best Topic Match ----------------------------------
+
 # create column for the topic that has the
 # greatest contribution to that document
 
 prompt_lda_document$max_topic <- 
-  colnames(prompt_lda_document[2:6])[apply(X=prompt_lda_document,
+  colnames(prompt_lda_document[2:4])[apply(X=prompt_lda_document,
                                           MARGIN=1,
                                           FUN=which.max)]
 
-# join tables together
+
+# join tables together --------------------------------
+
 dt1 <- data.table(prompt_lda_document, 
                   key = "document")
 dt2 <- data.table(prompt_df, 
@@ -453,9 +420,11 @@ get_sentiments("bing")
 
 # convert csv data into a format 
 # the tidyverse library can work with
+colnames(prompt_df)
+
 tidy_prompts <- prompt_df %>%
   ungroup() %>%
-  unnest_tokens(word, prompt)
+  unnest_tokens(word, text)
 
 # from the conversion above, 
 # we have a new column called "word"
@@ -469,14 +438,16 @@ colnames(tidy_prompts)
 nrc_sent <- get_sentiments("nrc") %>%
   filter(sentiment == "joy")
 
-# --> Which words do top writing prompts express joy with
+
+# --> Which words do top writing prompts express joy with -------------
 # inner join nrc_sent with prompts
-tidy_prompts %>%
-  inner_join(nrc_sent) %>%
-  dplyr::count(word, sort = TRUE) # important to specify dplyer's count
+joy_words <- tidy_prompts %>%
+            inner_join(nrc_sent) %>%
+            dplyr::count(word, sort = TRUE) # important to specify dplyer's count
+joy_words
 
 
-# --> Difference of positive and negative words in each prompt
+# --> Difference of positive and negative words in each prompt ------
 # ex: if one is lots of negative words, we get a negative score
 # ex: if one is lots of positive words, we get a positive score
 prompts_sentiment <- tidy_prompts %>%
@@ -487,13 +458,32 @@ prompts_sentiment <- tidy_prompts %>%
 
 head(prompts_sentiment)
 
-# visualize positive words vs negative words in prompt
+
+# # Get all bing sentiments ---------------------------------------
+# 
+# write.csv(get_sentiments("bing"),
+#           file = paste("bing_sentiments",
+#                        k,
+#                        ".csv",
+#                        sep = ""))
+
+
+# # Export CSV sentiment values ---------------------------------------
+# 
+# write.csv(prompts_sentiment,
+#           file = paste("prompts_sentiments",
+#                        k,
+#                        ".csv",
+#                        sep = ""))
+
+
+# visualize positive words vs negative words in prompt -------------
 ggplot(prompts_sentiment, aes(negative, positive)) +
   geom_point(show.legend = FALSE,
              size = 15,
              shape = "square",
              alpha = 0.1)
 
-# the mean sentiment analysis of all bowie lyrics together
+# the mean sentiment analysis of all bowie lyrics together ---------
 all_prompts_sentiment <- mean(prompts_sentiment$sentiment)
 all_prompts_sentiment

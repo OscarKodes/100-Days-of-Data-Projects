@@ -362,3 +362,14 @@ I aim to do at least one of the following each day:
 
 - Experiment on NLP topic analysis with different K values and stopwords. 
 - Export CSVs for visualizing topic analysis and sentiment analysis.
+
+
+---
+
+### Day 41 - Aug 10, 2022
+
+**Tasks Done**
+
+- Plan general layout of D3 vis blog site for NLP writingprompts.
+- Create a simple skeleton website for mobile first responsiveness.
+

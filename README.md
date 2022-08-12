@@ -373,3 +373,13 @@ I aim to do at least one of the following each day:
 - Plan general layout of D3 vis blog site for NLP writingprompts.
 - Create a simple skeleton website for mobile first responsiveness.
 
+
+
+---
+
+### Day 42-43 - Aug 11-12, 2022
+
+**Tasks Done**
+
+- SQL Analysis of School Assessments (Start)
+- Add simple D3 bargraph to WritingPrompts blog.

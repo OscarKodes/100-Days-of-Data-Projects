@@ -315,6 +315,17 @@ top_terms <- prompt_lda_tidy %>%
   arrange(topic, -beta)
 head(top_terms, 10)
 
+
+# Export to CSV
+
+write.csv(top_terms,
+          file = paste("01-prompt_LDA_",
+                       k,
+                       ".csv",
+                       sep = ""))
+
+
+
 # visualize with ggplot
 # NOTE: We want to treat the topics as categorical,
 # so turn it to a factor first.

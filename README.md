@@ -383,3 +383,14 @@ I aim to do at least one of the following each day:
 
 - SQL Analysis of School Assessments (Start)
 - Add simple D3 bargraph to WritingPrompts blog.
+
+
+---
+
+### Day 42-43 - Aug 13-14, 2022
+
+**Tasks Done**
+
+- SQL Analysis of School Assessments (Finish)
+- Create modular barcharts in D3 for NLP WritingPrompts.
+- Fix NLP topic clusters and change stopwords.

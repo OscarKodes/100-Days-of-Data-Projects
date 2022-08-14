@@ -16,12 +16,6 @@
 
     <div id="main-container">
 
-        <div id="testing-div">
-            <h1>Testing div</h1>
-
-            <button id="click-btn">Click</button>
-        </div>
-
         <div id="title-section" class="section">
             <h1>Title</h1>
 
@@ -49,12 +43,21 @@
                 Doloremque odio ea eius, enim quos suscipit animi.
                 Autem dolores illum architecto laborum minus eaque delectus ut voluptatem,
                 sunt aut maxime non vero sapiente asperiores voluptatum.
+                <br>
+                <br>
+                stop words: (english list) + "just", "can", "like",
+                "one", "youre", "get",
+                "find", "day", "human",
+                "humans", "world", "time",
+                "life", "years", "now"
             </p>
 
 
             <!-- D3 VIS GOES BELOW HERE -->
 
-            <div id="container"></div>
+            <div id="bar-1" class="vis"></div>
+            <div id="bar-2" class="vis"></div>
+            <div id="bar-3" class="vis"></div>
 
             <!-- D3 VIS GOES ABOVE HERE -->
 
@@ -120,7 +123,7 @@
         <script src="https://d3js.org/d3.v7.min.js"></script>
 
         <!-- Javascript -->
-        <script src="main.js"></script>
+        <script type="module" src="main.js"></script>
 
 
     </div>

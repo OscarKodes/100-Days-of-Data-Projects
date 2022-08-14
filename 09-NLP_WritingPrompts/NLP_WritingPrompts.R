@@ -210,7 +210,11 @@ prompt_cleaned <- tm_map(prompt_cleaned, content_transformer(tolower))
 
 # Remove stop words
 my_stops <- c(stopwords("en"),
-              "just", "can", "like")
+              "just", "can", "like",
+              "one", "youre", "get",
+              "find", "day", "human",
+              "humans", "world", "time",
+              "life", "years", "now")
 
 prompt_cleaned <- tm_map(prompt_cleaned, removeWords, my_stops)
 
@@ -287,7 +291,7 @@ prompt_lda_words
 prompt_lda_topics <- as.matrix(prompt_lda_words)
 
 # write.csv(prompt_lda_topics,
-#           file = paste("prompt_LDA_",
+#           file = paste("(new)prompt_LDA_",
 #                        k,
 #                        ".csv",
 #                        sep = ""))
@@ -317,13 +321,13 @@ head(top_terms, 10)
 
 
 # Export to CSV
-
-write.csv(top_terms,
-          file = paste("01-prompt_LDA_",
-                       k,
-                       ".csv",
-                       sep = ""))
-
+# 
+# write.csv(top_terms,
+#           file = paste("(new)01-prompt_LDA_",
+#                        k,
+#                        ".csv",
+#                        sep = ""))
+# 
 
 
 # visualize with ggplot
@@ -355,7 +359,7 @@ head(prompt_lda_document_topics)
 tail(prompt_lda_document_topics)
 
 # write.csv(prompt_lda_document_topics,
-#           file = paste("prompt_topic_gamma_match",
+#           file = paste("(new)prompt_topic_gamma_match",
 #                        k,
 #                        ".csv",
 #                        sep = ""))

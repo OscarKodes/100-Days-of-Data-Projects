@@ -34,11 +34,9 @@ h1 {
     padding: 4rem;
 }
 
-#testing-div {}
-
 .vis {
-    height: 10rem;
-    background-color: powderblue;
+    height: 250px;
+    /* background-color: powderblue; */
     text-align: center;
 }
 

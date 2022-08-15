@@ -398,7 +398,7 @@ I aim to do at least one of the following each day:
 
 ---
 
-### Day 44-45 - Aug 13-14, 2022
+### Day 46 - Aug 15, 2022
 
 **Tasks Done**
 

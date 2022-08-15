@@ -394,3 +394,12 @@ I aim to do at least one of the following each day:
 - SQL Analysis of School Assessments (Finish)
 - Create modular barcharts in D3 for NLP WritingPrompts.
 - Fix NLP topic clusters and change stopwords.
+
+
+---
+
+### Day 44-45 - Aug 13-14, 2022
+
+**Tasks Done**
+
+- Add D3 code for sentiment scatterplot.

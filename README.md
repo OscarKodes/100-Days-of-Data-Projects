@@ -403,3 +403,11 @@ I aim to do at least one of the following each day:
 **Tasks Done**
 
 - Add D3 code for sentiment scatterplot.
+
+---
+
+### Day 47-48 - Aug 16-17, 2022
+
+**Tasks Done**
+
+- Adjust visses and text size for mobile first.

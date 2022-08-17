@@ -1,12 +1,13 @@
 // CONSTANTS ################################################
-const margin = 50,
-radius = 5;
+const margin = 85;
+const marginLeft = 10;
+const radius = 5;
 
 const allGenres = ["Comedy", "Drama", "Adventure", "Thriller", "Horror", "Action", "Romance"];
 const allColors = ["Yellow", "Red", "Green", "Purple", "Black", "Blue", "Pink"];
 
-let width = 600;
-let height = width;
+const width = window.innerWidth * 0.9;
+const height = window.innerHeight * 0.5;
 
 
 // IMPORT IN DATA ############################################
@@ -18,11 +19,13 @@ d3.csv("data_to_visualize/03-prompts_sentiments3.csv", d3.autoType).then(data =>
 
     // SCALES =================================================
     const xScale = d3.scaleLinear()
-        .domain(d3.extent(data, d => d["positive"]))
-        .range([margin, width - margin]);
+        // .domain(d3.extent(data, d => d["negative"]))
+        .domain([0, 10])
+        .range([margin + marginLeft, width - margin]);
 
     const yScale = d3.scaleLinear()
-        .domain(d3.extent(data, d => d["negative"]))
+        // .domain(d3.extent(data, d => d["positive"]))
+        .domain([0, 10])
         .range([height - margin, margin]);
 
 
@@ -31,32 +34,42 @@ d3.csv("data_to_visualize/03-prompts_sentiments3.csv", d3.autoType).then(data =>
         .append("svg")
         .attr("height", height)
         .attr("width", width)
-        .style("background-color", "lavender");
+        // .style("background-color", "lavender");
 
     // AXIS TICKS  ----------------------------------------------
+
+    //  X-ticks
     svg.append("g")
         .attr("transform", `translate(0,${height - margin})`)
+        .style("font-size", "1.8rem")
         .call(d3.axisBottom(xScale));
 
+    //  Y-ticks
     svg.append("g")
-        .attr("transform", `translate(${margin},0)`)
+        .attr("transform", `translate(${margin + marginLeft},0)`)
+        .style("font-size", "1.8rem")
         .call(d3.axisLeft(yScale));
 
-    // AXIS LABELS ----------------------------------------------
+    // AXIS Titles ----------------------------------------------
+
+    // X-Axis Title
     svg.append("text")
         .attr("text-anchor", "middle")
         .attr("x", width / 2)
         .attr("y", height - 6)
         .style("font-weight", "bold")
-        .style("font-size", "1.2rem")
+        .style("font-size", "2.5rem")
+        .style("fill", "#444")
         .text("Negative Sentiment");
 
+    // Y-axis Title
     svg.append("text")
         .attr("text-anchor", "end")
-        .attr("x", -height / 2 + margin * 2)
-        .attr("y", 15)
+        .attr("x", -280)
+        .attr("y", 40)
         .style("font-weight", "bold")
-        .style("font-size", "1.2rem")
+        .style("font-size", "2.5rem")
+        .style("fill", "#444")
         .attr("transform", "rotate(-90)")
         .text("Positive Sentiment");
 
@@ -64,9 +77,10 @@ d3.csv("data_to_visualize/03-prompts_sentiments3.csv", d3.autoType).then(data =>
     svg.append("text")
         .attr("text-anchor", "middle")
         .attr("x", width / 2)
-        .attr("y", 30)
+        .attr("y", 40)
         .style("font-weight", "bold")
-        .style("font-size", "1.2rem")
+        .style("font-size", "2.8rem")
+        .style("fill", "#111")
         .text("Writing Prompts Sentiments");
 
 
@@ -77,10 +91,10 @@ d3.csv("data_to_visualize/03-prompts_sentiments3.csv", d3.autoType).then(data =>
             enter => enter
             .append("rect")
                 .attr("class", "dot")
-                .attr("width", 30)
-                .attr("height", 30)
+                .attr("width", height / 14)
+                .attr("height", height / 14)
                 .attr("transform", d => `translate(${xScale(d["negative"])},
-                                        ${yScale(d["positive"]) - 30})`)
+                                        ${yScale(d["positive"]) - (height / 14)})`)
                 .attr("fill-opacity", "0.05")
                 .attr("fill", "black")
         );
@@ -88,11 +102,11 @@ d3.csv("data_to_visualize/03-prompts_sentiments3.csv", d3.autoType).then(data =>
 
     // Add sentiment 0 line --------------------------------------------
     svg.append("line")
-        .attr("x1", xScale(0))
+        .attr("x1", xScale(0) + marginLeft)
         .attr("y1", yScale(0))
-        .attr("x2", xScale(8))
-        .attr("y2", yScale(8))
-        .attr("stroke-width", "2px")
+        .attr("x2", xScale(10) + marginLeft)
+        .attr("y2", yScale(10))
+        .attr("stroke-width", "5px")
         .attr("stroke", "#77DD77")
         .attr("opacity", 0.5)
 });

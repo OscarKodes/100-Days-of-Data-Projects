@@ -9,9 +9,9 @@
 @media screen and (max-width: 1079px) {
 
     /* For mobile and table sizes */
-    html {
+    /* html {
         font-size: 120%;
-    }
+    } */
 }
 
 
@@ -20,8 +20,20 @@ body {
     margin: 0;
 }
 
+p {
+    line-height: 1.5;
+    color: #444;
+
+    padding: 1.5rem 2.5rem;
+}
+
 h1 {
     margin: 0;
+}
+
+h1,
+h2 {
+    padding: 2.5rem 2rem 0 2rem;
 }
 
 /* MAIN CONTAINER */
@@ -30,14 +42,15 @@ h1 {
     margin: 0 auto;
     box-shadow: 0 1rem 1.5rem 0 #333333;
     background-color: white;
-    /* height: 200vh; */
-    padding: 4rem;
+    padding: 2rem;
+
 }
 
 .bar-vis {
-    height: 250px;
+    /* height: 250px; */
     /* background-color: powderblue; */
     text-align: center;
+    /* margin-top: 1rem; */
 }
 
 .scatter-vis {
@@ -45,6 +58,6 @@ h1 {
 }
 
 .section {
-    margin: 4rem 0;
+    margin: 2.5rem 0;
     border: 2px solid black
 }

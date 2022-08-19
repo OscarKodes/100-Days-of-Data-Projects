@@ -411,3 +411,11 @@ I aim to do at least one of the following each day:
 **Tasks Done**
 
 - Adjust visses and text size for mobile first.
+
+---
+
+### Day 49-50 - Aug 18-19, 2022
+
+**Tasks Done**
+
+- Desktop and mobile responsive design, text, and visses.

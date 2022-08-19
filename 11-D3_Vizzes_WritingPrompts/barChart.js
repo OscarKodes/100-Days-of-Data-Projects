@@ -2,12 +2,16 @@ class BarChart {
 
     constructor(barNum) {
 
-      // this.width = 630;
-      this.width = window.innerWidth * 0.9;
-      this.height = window.innerHeight * 0.4;
+      this.viewWidth = window.innerWidth > 1080 ? 1080 : window.innerWidth;
+      this.viewHeight = window.innerHeight > 1744 ? 
+                        1744 : window.innerHeight < 1200 ?
+                        1200 : window.innerHeight;
+      this.isMobile = window.innerWidth < 1080;
+
+      this.width = this.viewWidth * 0.9;
+      this.height = this.viewHeight * 0.4;
       this.margin = 100;
       this.marginLeft = 75;
-      // this.marginRight = -50;
       this.duration = 1000;
       this.barNum = barNum;
 
@@ -79,7 +83,7 @@ class BarChart {
               .append("text")
               .attr("class", "bar-nums")
               .attr("x", d => xScale(d.beta) + this.margin + 10)
-              .attr("y", d => yScale(d.term) + yScale.bandwidth() - 15)
+              .attr("y", d => yScale(d.term) + yScale.bandwidth() - (this.isMobile ? 15 : 11))
               .style("font-size", "1.8rem")
               .text(d => `${Math.round(d.beta * 1000) / 1000}`)
           )
@@ -101,8 +105,8 @@ class BarChart {
         // xAxis title
         this.svg.append("text")
           .attr("text-anchor", "end")
-          .attr("x", 470)
-          .attr("y", 680)
+          .attr("x", this.isMobile ? 470 : 520)
+          .attr("y", this.isMobile ? 680 : 430)
           .style("font-weight", "bold")
           .style("font-size", "2.5rem")
           .style("fill", "#444")
@@ -110,8 +114,8 @@ class BarChart {
     
         // yAxis title
         this.svg.append("text")
-          .attr("y", 40)
-          .attr("x", -400)
+          .attr("y", this.isMobile ? 40 : 85)
+          .attr("x", this.isMobile ? -400 : -280)
           .attr("transform", "rotate(-90)")
           .style("font-weight", "bold")
           .style("font-size", "2.5rem")
@@ -127,7 +131,7 @@ class BarChart {
         // Vis Title
         this.svg.append("text")
             .attr("text-anchor", "middle")
-            .attr("x", 430)
+            .attr("x", this.isMobile ? 430 : 500)
             .attr("y", 50)
             .style("font-weight", "bold")
             .style("font-size", "2.8rem")

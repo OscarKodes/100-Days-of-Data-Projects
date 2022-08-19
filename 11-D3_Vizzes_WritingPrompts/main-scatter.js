@@ -1,14 +1,19 @@
 // CONSTANTS ################################################
-const margin = 85;
+
+
+// const viewWidth = window.innerWidth > 1080 ? 1080 : window.innerWidth;
+const viewHeight = window.innerHeight > 1744 ? 
+                  1744 : window.innerHeight < 1200 ?
+                  1200 : window.innerHeight;
+const isMobile = window.innerWidth < 1080;
+
+// const width = viewWidth * 0.9;
+const height = viewHeight * 0.5;
+const width = height;
+
+const margin = isMobile ? 85 : 60;
 const marginLeft = 10;
 const radius = 5;
-
-const allGenres = ["Comedy", "Drama", "Adventure", "Thriller", "Horror", "Action", "Romance"];
-const allColors = ["Yellow", "Red", "Green", "Purple", "Black", "Blue", "Pink"];
-
-const width = window.innerWidth * 0.9;
-const height = window.innerHeight * 0.5;
-
 
 // IMPORT IN DATA ############################################
 d3.csv("data_to_visualize/03-prompts_sentiments3.csv", d3.autoType).then(data => {
@@ -109,4 +114,5 @@ d3.csv("data_to_visualize/03-prompts_sentiments3.csv", d3.autoType).then(data =>
         .attr("stroke-width", "5px")
         .attr("stroke", "#77DD77")
         .attr("opacity", 0.5)
+        .attr("transform", d => `translate(-10, 0)`)
 });

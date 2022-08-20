@@ -154,10 +154,10 @@ prompt_df <- select(title_df, id, prompt, score, num_comments, url, created)
 head(prompt_df)
 tail(prompt_df)
 
-write.csv(prompt_df,
-          file = paste("cleaned_prompt_df"
-                       ".csv",
-                       sep = ""))
+# write.csv(prompt_df,
+#           file = paste("cleaned_prompt_df"
+#                        ".csv",
+#                        sep = ""))
 
 
 ##############################################################

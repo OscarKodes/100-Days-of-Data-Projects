@@ -25,34 +25,56 @@
 
 
             <p>
-                Introduction text goes here.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dignissimos minima esse recusandae quasi cumque possimus vel
-                ad temporibus enim! Magni odit culpa fugiat perspiciatis.
-                Doloremque odio ea eius, enim quos suscipit animi.
-                Autem dolores illum architecto laborum minus eaque delectus ut voluptatem,
-                sunt aut maxime non vero sapiente asperiores voluptatum.
+                I scraped the top 1000 posts on the WritingPrompts subreddit.
+
+                Conducting NLP (Natural Language Processing), I performed topic analysis and sentiment analysis on the
+                scraped
+                prompts.
             </p>
+
+            <div class="bullet-list">
+                <ul>
+                    <li>
+                        What do the top prompts have in common?
+                    </li>
+                    <li>
+                        Can they be separated into clusters?
+                    </li>
+                    <li>
+                        What is the general sentiment of the top prompts?
+                    </li>
+                    <li>
+                        Do Redditors prefer positive or negative prompts?
+                    </li>
+                </ul>
+            </div>
+
+
         </div>
 
         <div id="analysis-1-section" class="section">
-            <h2>Title of Analysis 1</h2>
+            <h2>Topic Analysis</h2>
 
             <p>
-                Explain analysis 1
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dignissimos minima esse recusandae quasi cumque possimus vel
-                ad temporibus enim! Magni odit culpa fugiat perspiciatis.
-                Doloremque odio ea eius, enim quos suscipit animi.
-                Autem dolores illum architecto laborum minus eaque delectus ut voluptatem,
-                sunt aut maxime non vero sapiente asperiores voluptatum.
+                I performed topic analysis using LDA, and I grouped the prompts into
+                three clusters.
+
+                I removed all the words from R's list of common English stop words.
+
+                I also removed these words because they kept appearing in multiple clusters:
+                just, can, like, one, you're, get, find, day, human, humans, world, time,
+                life, years, and now.
+
                 <br>
                 <br>
-                stop words: (english list) + "just", "can", "like",
-                "one", "youre", "get",
-                "find", "day", "human",
-                "humans", "world", "time",
-                "life", "years", "now"
+                The repetition of those words suggests that the top writing prompts often
+                deal with making discoveries (find), humanity (human, humans, world),
+                time (time, years, now), and life (life).
+
+                <br>
+                <br>
+                With the clusters below, we get to see which common topics top prompts
+                we might be able to group them into.
             </p>
 
 
@@ -66,42 +88,33 @@
 
 
             <p>
-                Conclusions for analysis 1
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dignissimos minima esse recusandae quasi cumque possimus vel
-                ad temporibus enim! Magni odit culpa fugiat perspiciatis.
-                Doloremque odio ea eius, enim quos suscipit animi.
-                Autem dolores illum architecto laborum minus eaque delectus ut voluptatem,
-                sunt aut maxime non vero sapiente asperiores voluptatum.
+                It seems the prompts that appeal most to Redditors involve mortality,
+                society, or aliens!
+
             </p>
 
         </div>
 
         <div id="analysis-2-section" class="section">
-            <h2>Title of Analysis 2</h2>
+            <h2>Sentiment Analysis</h2>
 
             <p>
-                Explain analysis 2
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dignissimos minima esse recusandae quasi cumque possimus vel
-                ad temporibus enim! Magni odit culpa fugiat perspiciatis.
-                Doloremque odio ea eius, enim quos suscipit animi.
-                Autem dolores illum architecto laborum minus eaque delectus ut voluptatem,
-                sunt aut maxime non vero sapiente asperiores voluptatum.
-
+                For this next part, I ran a sentiment analysis on the words of each prompt to
+                get the overall sentiment score. A positive sentiment score suggests the prompt
+                might be related to happier and more optimistic emotions. A negative score
+                suggests the opposite.
                 <br><br>
 
-                X-axis = Negative sentiment <br>
-                Y-axis = Positive sentiment <br>
-                Green line = neutral sentiment <br>
-                If above green line, total sentiment = positive <br>
-                If below green line, total sentiment = negative <br>
-                Darker rectangle shades = more prompts with that sentiment score <br>
-                Lighter rectangle shades = less prompts with that sentiment score <br>
+                On the visualization below, squares below the green line show writing prompts with
+                negative sentiment scores. The squares above the green line show writing prompts with
+                positive sentiment scores.
 
-                <br><br>
-                It seems pretty balance. Maybe slightly leaning towards negative.
+                <br>
+                <br>
 
+                The squares with darker shades show that there are more prompts of that sentiment score.
+                (They are darker because each square is a prompt's sentiment score plotted, and they
+                stack on top of each other if they have the same score resulting in a darker shade.)
             </p>
 
             <!-- D3 VIS GOES BELOW HERE -->
@@ -111,28 +124,24 @@
             <!-- D3 VIS GOES ABOVE HERE -->
 
             <p>
-                Conclusions for analysis 2
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dignissimos minima esse recusandae quasi cumque possimus vel
-                ad temporibus enim! Magni odit culpa fugiat perspiciatis.
-                Doloremque odio ea eius, enim quos suscipit animi.
-                Autem dolores illum architecto laborum minus eaque delectus ut voluptatem,
-                sunt aut maxime non vero sapiente asperiores voluptatum.
+                It seems there is about the same amount of positive and negative sentiment scores
+                with a slight lean toward the negative side.
+
+                <br><br>
+                Calculating all the sentiment scores together in R resulted in a total
+                sentiment score of -0.614, which certainly is close to a neutral score of 0,
+                but it is slightly negative.
             </p>
 
         </div>
 
         <div id="reflection-section" class="section">
-            <h2>Reflections</h2>
+            <h2>Conclusions</h2>
 
             <p>
-                Reflection & Future Ideas
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dignissimos minima esse recusandae quasi cumque possimus vel
-                ad temporibus enim! Magni odit culpa fugiat perspiciatis.
-                Doloremque odio ea eius, enim quos suscipit animi.
-                Autem dolores illum architecto laborum minus eaque delectus ut voluptatem,
-                sunt aut maxime non vero sapiente asperiores voluptatum.
+                It seems Redditors enjoy writing prompts that relate to
+                mortality, society, and aliens with a slightly negative tone.
+
             </p>
 
         </div>

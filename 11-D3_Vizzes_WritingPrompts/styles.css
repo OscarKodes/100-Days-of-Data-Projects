@@ -21,11 +21,20 @@ body {
     margin: 0;
 }
 
-p {
+p,
+.bullet-list {
     line-height: 1.65;
     color: #444;
     font-size: 1.8rem;
+}
+
+p {
     padding: 1.5rem 2.5rem;
+}
+
+.bullet-list {
+    width: 85%;
+    margin: 0 auto;
 }
 
 h1 {

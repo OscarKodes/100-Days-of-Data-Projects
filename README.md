@@ -419,3 +419,11 @@ I aim to do at least one of the following each day:
 **Tasks Done**
 
 - Desktop and mobile responsive design, text, and visses.
+
+---
+
+### Day 51 - Aug 20, 2022
+
+**Tasks Done**
+
+- Add text explaining my text analysis for the WritingPrompt NLP visualizations.

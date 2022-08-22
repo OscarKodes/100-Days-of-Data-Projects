@@ -25,20 +25,51 @@ p,
 .bullet-list {
     line-height: 1.65;
     color: #444;
+}
+
+.bullet-list {
     font-size: 1.8rem;
 }
 
 p {
     padding: 1.5rem 2.5rem;
+    text-align: justify;
+    font-size: 1.65rem;
 }
 
-.bullet-list {
+/* .bullet-list {
     width: 85%;
     margin: 0 auto;
+    padding: 0 0 3rem 2rem;
+} */
+
+.bullet-list {
+    width: 50rem;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    font-size: 1.65rem;
+    border: 2px #DDD dotted;
+}
+
+@media screen and (min-width: 1080px) {
+
+    /* For laptop and desktop sizes */
+    .bullet-list {
+        width: 50rem;
+        margin: 0 auto 2rem;
+        padding: 1rem;
+        font-size: 2rem;
+        border: 2px #DDD dotted;
+    }
 }
 
 h1 {
     margin: 0;
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 3rem;
 }
 
 h1,
@@ -109,4 +140,19 @@ h2 {
 .section {
     margin: 2.5rem 0;
     border: 2px solid black
+}
+
+.by-line {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: steelblue;
+}
+
+#bottom-link {
+    text-align: center;
+    font-size: 2.1rem;
+    padding-bottom: 3rem;
 }

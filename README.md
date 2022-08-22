@@ -427,3 +427,13 @@ I aim to do at least one of the following each day:
 **Tasks Done**
 
 - Add text explaining my text analysis for the WritingPrompt NLP visualizations.
+
+---
+
+### Day 52-53 - Aug 21-22, 2022
+
+**Tasks Done**
+
+- Polish up NLP website blog with D3 visses. 
+- Adjust responsive design of mobile and desktop.
+- Add portfolio links.

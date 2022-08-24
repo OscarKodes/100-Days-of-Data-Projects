@@ -435,5 +435,15 @@ I aim to do at least one of the following each day:
 **Tasks Done**
 
 - Polish up NLP website blog with D3 visses. 
+    - https://oscarkodes.github.io/100-Days-of-Data-Projects/11-D3_Vizzes_WritingPrompts/
 - Adjust responsive design of mobile and desktop.
 - Add portfolio links.
+
+---
+
+### Day 52-53 - Aug 21-22, 2022
+
+**Tasks Done**
+
+- Add readme files to NLP WritingPrompts and D3 vis website repos.
+- Add NLP WritingPrompt project to portfolio site.

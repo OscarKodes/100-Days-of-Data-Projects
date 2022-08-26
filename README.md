@@ -447,3 +447,13 @@ I aim to do at least one of the following each day:
 
 - Add readme files to NLP WritingPrompts and D3 vis website repos.
 - Add NLP WritingPrompt project to portfolio site.
+
+---
+
+### Day 56-57 - Aug 25-26, 2022
+
+**Tasks Done**
+
+- Setup Magic SQL querying in notebooks
+- Replace database sensitive passwords with environment variables
+- Setup SQL exporting query results to CSV on desktop

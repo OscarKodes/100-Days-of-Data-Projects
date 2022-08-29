@@ -457,3 +457,12 @@ I aim to do at least one of the following each day:
 - Setup Magic SQL querying in notebooks
 - Replace database sensitive passwords with environment variables
 - Setup SQL exporting query results to CSV on desktop
+
+---
+
+### Day 58-60 - Aug 27-29, 2022
+
+**Tasks Done**
+
+- Practice SQL Windows Functions
+- Plan further tasks to do

@@ -466,3 +466,12 @@ I aim to do at least one of the following each day:
 
 - Practice SQL Windows Functions
 - Plan further tasks to do
+
+---
+
+### Day 61 - Aug 30, 2022
+
+**Tasks Done**
+
+- Practice SQL Windows Functions
+    - Row number, rank, dense rank, ntiles, partitions

@@ -473,5 +473,14 @@ I aim to do at least one of the following each day:
 
 **Tasks Done**
 
-- Practice SQL Windows Functions
+- Practice Advanced SQL Windows Functions
     - Row number, rank, dense rank, ntiles, partitions
+    
+---
+
+### Day 62 - Aug 31, 2022
+
+**Tasks Done**
+
+- Practice Advanced SQL Windows Functions
+    - Lag, Lead, Window Alias, Max, partitions

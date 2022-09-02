@@ -484,3 +484,14 @@ I aim to do at least one of the following each day:
 
 - Practice Advanced SQL Windows Functions
     - Lag, Lead, Window Alias, Max, partitions
+    
+---
+
+### Day 63 - 64 - Sep 1-2, 2022
+
+**Tasks Done**
+
+- Find a dataset to work with
+- Experiment with setting up a markdown R script file
+- Import possom data
+- Review machine learning notes

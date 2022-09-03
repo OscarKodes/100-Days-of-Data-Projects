@@ -495,3 +495,12 @@ I aim to do at least one of the following each day:
 - Experiment with setting up a markdown R script file
 - Import possom data
 - Review machine learning notes
+
+---
+
+### Day 65 - Sep 3, 2022
+
+**Tasks Done**
+
+- Practice SQL common table expressions
+- Also combine common table expressions with window functions

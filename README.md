@@ -493,7 +493,7 @@ I aim to do at least one of the following each day:
 
 - Find a dataset to work with
 - Experiment with setting up a markdown R script file
-- Import possom data
+- Import possum data
 - Review machine learning notes
 
 ---
@@ -504,3 +504,15 @@ I aim to do at least one of the following each day:
 
 - Practice SQL common table expressions
 - Also combine common table expressions with window functions
+
+---
+
+### Day 66-67 - Sep 4-5, 2022
+
+**Tasks Done**
+
+- Import possum data into new R script
+- Rename columns
+- Train-test split
+- Remove missing values
+- Visualize with correlation matrix heatmap & histograms

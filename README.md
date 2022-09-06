@@ -516,3 +516,12 @@ I aim to do at least one of the following each day:
 - Train-test split
 - Remove missing values
 - Visualize with correlation matrix heatmap & histograms
+
+---
+
+### Day 68 - Sep 6, 2022
+
+**Tasks Done**
+
+- Perform exploratory analysis on possum data
+- Prepare data for machine learning by standardizing features

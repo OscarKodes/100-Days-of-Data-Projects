@@ -56,6 +56,9 @@ colnames(data) <- c("id",
                     "chest_girth_cm",
                     "belly_girth_cm")
 
+# convert site_trapped to categorical
+
+data$site_trapped <- factor(data$site_trapped)
 
 
 ###########################################
@@ -105,6 +108,7 @@ any(is.na(trainingData))
 # Every change we make to the training data, 
 # we must do to the test data
 testData <- na.omit(testData)
+
 
 
 ###########################################
@@ -159,22 +163,168 @@ corrgram(trainingData,
 
 colnames(trainingData)
 
+# continuous feature histograms -------
+
+ggplot(trainingData, 
+       aes(x = age)) +
+  geom_histogram(binwidth=2,
+                 fill="darkgreen",
+                 alpha=0.5,
+                 color="black")
+
+ggplot(trainingData, 
+       aes(x = head_length_mm)) +
+  geom_histogram(binwidth=3,
+                 fill="darkblue",
+                 alpha=0.5,
+                 color="black")
+
+ggplot(trainingData, 
+       aes(x = skull_width_mm)) +
+  geom_histogram(binwidth=3,
+                 fill="darkred",
+                 alpha=0.5,
+                 color="black")
+
+# Note: It seems there are some possums with unusually large skulls.
+
+ggplot(trainingData, 
+       aes(x = total_length_cm)) +
+  geom_histogram(binwidth=3,
+                 fill="purple",
+                 alpha=0.5,
+                 color="black")
+
+# Note: Total length of possums seem to have two general peaks
+
 ggplot(trainingData, 
        aes(x = tail_length_cm)) +
   geom_histogram(binwidth=2,
-                 fill="darkgreen",
-                 alpha=0.5)
+                 fill="orange",
+                 alpha=0.5,
+                 color="black")
+
+ggplot(trainingData, 
+       aes(x = foot_length_mm)) +
+  geom_histogram(binwidth=2,
+                 fill="grey",
+                 color="black")
+
+# Note: foot length also seems to have two peaks.
+
+ggplot(trainingData, 
+       aes(x = earconch_length_mm)) +
+  geom_histogram(binwidth=2,
+                 fill="pink",
+                 alpha=0.5,
+                 color="black")
+
+# Note: Earconch length also seems to have two peaks.
+
+ggplot(trainingData, 
+       aes(x = eye_width_mm)) +
+  geom_histogram(binwidth=1,
+                 fill="coral",
+                 alpha=0.5,
+                 color="black")
+
+ggplot(trainingData, 
+       aes(x = chest_girth_cm)) +
+  geom_histogram(binwidth=2,
+                 fill="darkolivegreen",
+                 alpha=0.5,
+                 color="black")
+
+# Note: chest girth seems to be negatively skewed
+
+ggplot(trainingData, 
+       aes(x = belly_girth_cm)) +
+  geom_histogram(binwidth=2,
+                 fill="darkgoldenrod",
+                 alpha=0.5,
+                 color="black")
+
+# Note: belly girth seems to be positively skewed
+
+
+# categorical feature histograms -------
+
+ggplot(trainingData, 
+       aes(x = site_trapped,
+           fill = site_trapped)) +
+  geom_bar()
+
+# Note: Sites 1 and 7 trapped the most possums.
 
 ggplot(trainingData, 
        aes(x = population_name,
            fill = population_name)) +
-  geom_bar(binwidth=2)
+  geom_bar()
 
-# continuous
-# age, head, skull, total
-# tail, foot, earconch, eye, chest, belly
+# More possums were trapped from other populations combined compared to Victoria alone.
 
-# categorical 
-# site_trapped, population_name, sex
+ggplot(trainingData, 
+       aes(x = sex,
+           fill = sex)) +
+  geom_bar()
+
+# Note: There are more female possums to male possums.
+
+
+
+###########################################
+# PREPARE THE DATA FOR MACHINE LEARNING
+
+# One-Hot Encode Categorical Features
+
+# NOTE: With R, one hot encoding might not be necessary
+
+
+# Feature Scale Continuous Variables - Standardization
+
+scale_numeric_cols <- function(df) {
+  numeric_cols <- select(df,
+                         -id,
+                         -site_trapped,
+                         -sex,
+                         -population_name)
+  
+  scaled_cols <- scale(numeric_cols)
+  
+  categorical_cols <- select(df,
+                             id,
+                             site_trapped,
+                             sex,
+                             population_name)
+  
+  return (cbind(categorical_cols, scaled_cols))
+}
+
+trainingData <- scale_numeric_cols(trainingData)
+
+testData <- scale_numeric_cols(testData)
+
+
+
+#####################################################
+#
+
+# Linear regression, full model, backwards elimination
+# test interaction terms
+#
+# Compare: full model, backwards model, lasso, ridge
+#
+# Use grid search on best model 
+
+
+
+
+
+
+
+
+
+
+
 
 

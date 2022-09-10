@@ -41,6 +41,7 @@ colnames(data)
 ###########################################
 # RENAME COLUMNS
 
+
 colnames(data) <- c("id",
                     "site_trapped",
                     "population_name",
@@ -56,10 +57,11 @@ colnames(data) <- c("id",
                     "chest_girth_cm",
                     "belly_girth_cm")
 
-# convert site_trapped to categorical
+data$population_name <- NULL
+
+# convert to categorical factors
 
 data$site_trapped <- factor(data$site_trapped)
-
 
 ###########################################
 # TRAIN-TEST SPLIT
@@ -257,13 +259,6 @@ ggplot(trainingData,
 # Note: Sites 1 and 7 trapped the most possums.
 
 ggplot(trainingData, 
-       aes(x = population_name,
-           fill = population_name)) +
-  geom_bar()
-
-# More possums were trapped from other populations combined compared to Victoria alone.
-
-ggplot(trainingData, 
        aes(x = sex,
            fill = sex)) +
   geom_bar()
@@ -286,16 +281,14 @@ scale_numeric_cols <- function(df) {
   numeric_cols <- select(df,
                          -id,
                          -site_trapped,
-                         -sex,
-                         -population_name)
+                         -sex)
   
   scaled_cols <- scale(numeric_cols)
   
   categorical_cols <- select(df,
                              id,
                              site_trapped,
-                             sex,
-                             population_name)
+                             sex)
   
   return (cbind(categorical_cols, scaled_cols))
 }
@@ -307,24 +300,120 @@ testData <- scale_numeric_cols(testData)
 
 
 #####################################################
-#
-
-# Linear regression, full model, backwards elimination
-# test interaction terms
-#
-# Compare: full model, backwards model, lasso, ridge
-#
-# Use grid search on best model 
+# COMPARE REGRESSION MODELS
 
 
+# Full Model ----
+fullModel <- lm(skull_width_mm ~ , 
+                data = trainingData)
 
+summary(fullModel)
+# Note: R-squared is 0.7195. Overall P-value is below 0.05.
 
 
 
+# Backwards Elimination 1 ----  alpha = 0.05
+backwards1 <- lm(skull_width_mm ~ chest_girth_cm, data = trainingData)
+
+summary(backwards1)
+# Note: R-squared is 0.4023. Overall P-value is below 0.05.
+# Note: Removing the other features decreased predictive power by a lot
+# Try backwards elimination with alpha level of 0.10
 
 
 
+# Backwards Elimination 2 ---- alpha = 0.10
+backwards2 <- lm(skull_width_mm ~ chest_girth_cm + eye_width_mm, 
+                 data = trainingData)
+
+summary(backwards2)
+# Note: R-squared is 0.4506. Overall P-value is below 0.05.
+# Note: By increasing alpha, we allowed for eye_width_mm to stay in the model.
+# this increased predictive power by about 5%.
+
+
+########################################################
+# EVALUATE OUR MODELS WITH THE TEST SET DATA
+
+# Predict test set data with our model
+full_model_predictions <- predict(fullModel, testData)
+backwards1_predictions <- predict(backwards1, testData)
+backwards2_predictions <- predict(backwards2, testData)
+
+# Put the predictions and actual test points
+# side by side to compare
+results_full <- cbind(full_model_predictions, testData$skull_width_mm)
+results_back1 <- cbind(backwards1_predictions, testData$skull_width_mm)
+results_back2 <- cbind(backwards2_predictions, testData$skull_width_mm)
+
+colnames(results_full) <- c("predicted", "actual")
+colnames(results_back1) <- c("predicted", "actual")
+colnames(results_back2) <- c("predicted", "actual")
+
+results_full <- as.data.frame(results_full)
+results_back1 <- as.data.frame(results_back1)
+results_back2 <- as.data.frame(results_back2)
+
+head(results_full)
+head(results_back1)
+head(results_back2)
+
+
+# TAKE CARE OF NEGATIVE TEST SCORE PREDICTIONS
+
+results$predicted <- ifelse(results$predicted < 0, 0, results$predicted)
+
+# check lowest value has been changed to 0
+min(results$predicted)
 
 
 
+##########################################
+# LOOK AT RESIDUALS
+# NOTE: Residuals = error = difference b/w actual and fitted values
+# NOTE2: fitted = predicted
 
+# Visualize full model residuals ---------------
+res <- residuals(fullModel)
+
+head(res)
+
+# change to dataframe to visualize
+res <- as.data.frame(res)
+res
+
+# visualize residuals
+ggplot(res, aes(res)) + 
+  geom_histogram(fill="red", 
+                 alpha=0.5,
+                 bins=50)
+
+# Visualize backwards model 1 residuals -----------------
+res <- residuals(backwards1)
+
+head(res)
+
+# change to dataframe to visualize
+res <- as.data.frame(res)
+res
+
+# visualize residuals
+ggplot(res, aes(res)) + 
+  geom_histogram(fill="blue", 
+                 alpha=0.5,
+                 bins=50)
+
+# Visualize backwards model 2 residuals -----------------
+res <- residuals(backwards2)
+
+head(res)
+
+# change to dataframe to visualize
+res <- as.data.frame(res)
+res
+
+# visualize residuals
+ggplot(res, aes(res)) + 
+  geom_histogram(fill="green", 
+                 alpha=0.5,
+                 bins=50)

@@ -525,3 +525,14 @@ I aim to do at least one of the following each day:
 
 - Perform exploratory analysis on possum data
 - Prepare data for machine learning by standardizing features
+
+---
+
+### Day 69-72 - Sep 7-10, 2022
+
+**Tasks Done**
+
+- R possum regression
+    - Regression models
+    - Backwards elimanation with p-value = 0.05 and 0.10
+    - Residual visualization

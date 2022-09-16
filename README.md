@@ -546,3 +546,11 @@ I aim to do at least one of the following each day:
 - R possum classification
     - Experimented with full model vs backwards modelling
     - The model with less features was better. (Garbage in, garbage out)
+    
+---
+
+### Day 75-77 - Sep 13-15, 2022
+
+**Tasks Done**
+
+- Datacamp: Optimizing Online Sports Retail Revenue SQL

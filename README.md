@@ -554,3 +554,22 @@ I aim to do at least one of the following each day:
 **Tasks Done**
 
 - Datacamp: Optimizing Online Sports Retail Revenue SQL
+
+---
+
+### Day 78-83 - Sep 16-21, 2022
+
+**Tasks Done**
+
+- Finished Datacamp: Optimizing Online Sports Retail Revenue SQL
+
+- Skills practiced/learned:
+
+    - Common Table Expressions
+    - Casting
+    - Correlation
+    - Date Parting
+    - Aggregating
+    - Querying
+    - Case When
+    - ILIKE with ANY

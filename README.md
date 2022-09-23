@@ -573,3 +573,11 @@ I aim to do at least one of the following each day:
     - Querying
     - Case When
     - ILIKE with ANY
+
+---
+
+### Day 84-85 - Sep 22-23, 2022
+
+**Tasks Done**
+
+- Explore various datasets for a new Tableau Visualization

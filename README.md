@@ -581,3 +581,13 @@ I aim to do at least one of the following each day:
 **Tasks Done**
 
 - Explore various datasets for a new Tableau Visualization
+
+---
+
+### Day 86 - Sep 24, 2022
+
+**Tasks Done**
+
+- Explore cereal data
+
+- Plan a simple cereal visualization for Tableau

@@ -591,3 +591,15 @@ I aim to do at least one of the following each day:
 - Explore cereal data
 
 - Plan a simple cereal visualization for Tableau
+
+---
+
+### Day 87 - Sep 25, 2022
+
+**Tasks Done**
+
+- Work on Cereal dashboard in Tableau
+
+    - Find free images of bowl and spoon for iconography
+    
+    - Format dashboard

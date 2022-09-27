@@ -1,0 +1,595 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.22.0812.0355                               -->
+<workbook original-version='18.1' source-build='2021.4.10 (20214.22.0812.0355)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='cereal' inline='true' name='federated.0zzt9sl0qwiyyk1f1tle008a3y9j' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cereal' name='textscan.0z6fi6x1snjdj71d0jmjr1wd29pt'>
+            <connection class='textscan' directory='C:/Users/Oscar Ko/Desktop/100-Days-of-Data-Projects/18-Cereal_Visualization' filename='cereal.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0z6fi6x1snjdj71d0jmjr1wd29pt' name='cereal.csv' table='[cereal#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='name' ordinal='0' />
+            <column datatype='string' name='mfr' ordinal='1' />
+            <column datatype='string' name='type' ordinal='2' />
+            <column datatype='integer' name='calories' ordinal='3' />
+            <column datatype='integer' name='protein' ordinal='4' />
+            <column datatype='integer' name='fat' ordinal='5' />
+            <column datatype='integer' name='sodium' ordinal='6' />
+            <column datatype='real' name='fiber' ordinal='7' />
+            <column datatype='real' name='carbo' ordinal='8' />
+            <column datatype='integer' name='sugars' ordinal='9' />
+            <column datatype='integer' name='potass' ordinal='10' />
+            <column datatype='integer' name='vitamins' ordinal='11' />
+            <column datatype='integer' name='shelf' ordinal='12' />
+            <column datatype='real' name='weight' ordinal='13' />
+            <column datatype='real' name='cups' ordinal='14' />
+            <column datatype='real' name='rating' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0z6fi6x1snjdj71d0jmjr1wd29pt' name='cereal.csv' table='[cereal#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='name' ordinal='0' />
+            <column datatype='string' name='mfr' ordinal='1' />
+            <column datatype='string' name='type' ordinal='2' />
+            <column datatype='integer' name='calories' ordinal='3' />
+            <column datatype='integer' name='protein' ordinal='4' />
+            <column datatype='integer' name='fat' ordinal='5' />
+            <column datatype='integer' name='sodium' ordinal='6' />
+            <column datatype='real' name='fiber' ordinal='7' />
+            <column datatype='real' name='carbo' ordinal='8' />
+            <column datatype='integer' name='sugars' ordinal='9' />
+            <column datatype='integer' name='potass' ordinal='10' />
+            <column datatype='integer' name='vitamins' ordinal='11' />
+            <column datatype='integer' name='shelf' ordinal='12' />
+            <column datatype='real' name='weight' ordinal='13' />
+            <column datatype='real' name='cups' ordinal='14' />
+            <column datatype='real' name='rating' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mfr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mfr]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>mfr</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calories</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[calories]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>calories</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>protein</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[protein]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>protein</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fat</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fat]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>fat</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sodium</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sodium]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>sodium</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fiber</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fiber]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>fiber</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>carbo</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[carbo]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>carbo</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sugars</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sugars]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>sugars</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>potass</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[potass]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>potass</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vitamins</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[vitamins]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>vitamins</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>shelf</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[shelf]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>shelf</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weight</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[weight]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>weight</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cups</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cups]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>cups</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rating]</local-name>
+            <parent-name>[cereal.csv]</parent-name>
+            <remote-alias>rating</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='cereal.csv' datatype='table' name='[__tableau_internal_object_id__].[cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A]' role='measure' type='quantitative' />
+      <column caption='Calories' datatype='integer' name='[calories]' role='measure' type='quantitative' />
+      <column caption='Carbo' datatype='real' name='[carbo]' role='measure' type='quantitative' />
+      <column caption='Cups' datatype='real' name='[cups]' role='measure' type='quantitative' />
+      <column caption='Fat' datatype='integer' name='[fat]' role='measure' type='quantitative' />
+      <column caption='Fiber' datatype='real' name='[fiber]' role='measure' type='quantitative' />
+      <column caption='Manufacturer' datatype='string' name='[mfr]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;A&quot;' value='American Home Products' />
+          <alias key='&quot;G&quot;' value='General Mills' />
+          <alias key='&quot;K&quot;' value='Kelloggs' />
+          <alias key='&quot;N&quot;' value='Nabisco' />
+          <alias key='&quot;P&quot;' value='Post' />
+          <alias key='&quot;Q&quot;' value='Quaker Oats' />
+          <alias key='&quot;R&quot;' value='Ralston Purina' />
+        </aliases>
+      </column>
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Potass' datatype='integer' name='[potass]' role='measure' type='quantitative' />
+      <column caption='Protein' datatype='integer' name='[protein]' role='measure' type='quantitative' />
+      <column caption='Rating' datatype='real' name='[rating]' role='measure' type='quantitative' />
+      <column caption='Shelf' datatype='integer' name='[shelf]' role='measure' type='quantitative' />
+      <column caption='Sodium' datatype='integer' name='[sodium]' role='measure' type='quantitative' />
+      <column caption='Sugars' datatype='integer' name='[sugars]' role='measure' type='quantitative' />
+      <column caption='Type' datatype='string' name='[type]' role='dimension' type='nominal' />
+      <column caption='Vitamins' datatype='integer' name='[vitamins]' role='measure' type='quantitative' />
+      <column caption='Weight' datatype='real' name='[weight]' role='measure' type='quantitative' />
+      <column-instance column='[mfr]' derivation='None' name='[none:mfr:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:mfr:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;A&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;P&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;N&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;R&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;K&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Q&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;G&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='cereal.csv' id='cereal.csv_9F9F0AF230204566B2683C13E5AB6C1A'>
+            <properties context=''>
+              <relation connection='textscan.0z6fi6x1snjdj71d0jmjr1wd29pt' name='cereal.csv' table='[cereal#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='name' ordinal='0' />
+                  <column datatype='string' name='mfr' ordinal='1' />
+                  <column datatype='string' name='type' ordinal='2' />
+                  <column datatype='integer' name='calories' ordinal='3' />
+                  <column datatype='integer' name='protein' ordinal='4' />
+                  <column datatype='integer' name='fat' ordinal='5' />
+                  <column datatype='integer' name='sodium' ordinal='6' />
+                  <column datatype='real' name='fiber' ordinal='7' />
+                  <column datatype='real' name='carbo' ordinal='8' />
+                  <column datatype='integer' name='sugars' ordinal='9' />
+                  <column datatype='integer' name='potass' ordinal='10' />
+                  <column datatype='integer' name='vitamins' ordinal='11' />
+                  <column datatype='integer' name='shelf' ordinal='12' />
+                  <column datatype='real' name='weight' ordinal='13' />
+                  <column datatype='real' name='cups' ordinal='14' />
+                  <column datatype='real' name='rating' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontsize='14'>Top cereals are inside the bowl (More fiber &amp; less sugar)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cereal' name='federated.0zzt9sl0qwiyyk1f1tle008a3y9j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zzt9sl0qwiyyk1f1tle008a3y9j'>
+            <column-instance column='[name]' derivation='Attribute' name='[attr:name:nk]' pivot='key' type='nominal' />
+            <column caption='Cups' datatype='real' name='[cups]' role='measure' type='quantitative' />
+            <column caption='Fiber' datatype='real' name='[fiber]' role='measure' type='quantitative' />
+            <column caption='Manufacturer' datatype='string' name='[mfr]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;A&quot;' value='American Home Products' />
+                <alias key='&quot;G&quot;' value='General Mills' />
+                <alias key='&quot;K&quot;' value='Kelloggs' />
+                <alias key='&quot;N&quot;' value='Nabisco' />
+                <alias key='&quot;P&quot;' value='Post' />
+                <alias key='&quot;Q&quot;' value='Quaker Oats' />
+                <alias key='&quot;R&quot;' value='Ralston Purina' />
+              </aliases>
+            </column>
+            <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[mfr]' derivation='None' name='[none:mfr:nk]' pivot='key' type='nominal' />
+            <column caption='Sugars' datatype='integer' name='[sugars]' role='measure' type='quantitative' />
+            <column-instance column='[cups]' derivation='Sum' name='[sum:cups:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[fiber]' derivation='Sum' name='[sum:fiber:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sugars]' derivation='Sum' name='[sum:sugars:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[none:mfr:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;A&quot;</bucket>
+              <bucket>&quot;G&quot;</bucket>
+              <bucket>&quot;K&quot;</bucket>
+              <bucket>&quot;N&quot;</bucket>
+              <bucket>&quot;P&quot;</bucket>
+              <bucket>&quot;Q&quot;</bucket>
+              <bucket>&quot;R&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[sum:fiber:qk]' value='bold' />
+            <format attr='font-size' field='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[sum:fiber:qk]' value='11' />
+            <format attr='font-weight' field='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[sum:sugars:qk]' value='bold' />
+            <format attr='font-size' field='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[sum:sugars:qk]' value='12' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='1' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='size' field='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[sum:cups:qk]' value='Serving Size (Cups)&#10;' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[none:mfr:nk]' />
+              <size column='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[sum:cups:qk]' />
+              <tooltip column='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[attr:name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+                <format attr='shape' value='circle' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[sum:sugars:qk]</rows>
+        <cols>[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[sum:fiber:qk]</cols>
+      </table>
+      <simple-id uuid='{D10927D2-FB81-43E8-A84C-EB6363BDEA1B}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#cce6e3' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1200' minheight='800' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='72125' id='19' is-centered='0' param='C:/Users/Oscar Ko/Desktop/100-Days-of-Data-Projects/18-Cereal_Visualization/milk_bowl.png' type-v2='bitmap' w='72417' x='2083' y='17250' />
+        <zone h='68875' id='14' is-scaled='1' param='C:/Users/Oscar Ko/Desktop/100-Days-of-Data-Projects/18-Cereal_Visualization/Spoon.png' type-v2='bitmap' w='15500' x='74667' y='27375' />
+        <zone h='83250' id='3' name='Sheet 1' w='74333' x='1250' y='13875' />
+        <zone h='19750' id='4' name='Sheet 1' pane-specification-id='0' param='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[none:mfr:nk]' type-v2='color' w='19917' x='85167' y='2750' />
+        <zone h='12250' id='5' name='Sheet 1' pane-specification-id='0' param='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[sum:cups:qk]' type-v2='size' w='14000' x='90000' y='25125' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='18' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='17' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
+                <zone fixed-size='280' h='83250' id='3' is-fixed='true' name='Sheet 1' w='74333' x='10833' y='13875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='19750' id='4' name='Sheet 1' pane-specification-id='0' param='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[none:mfr:nk]' type-v2='color' w='19917' x='85417' y='18625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='12250' id='5' name='Sheet 1' pane-specification-id='0' param='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[sum:cups:qk]' type-v2='size' w='14000' x='85583' y='41000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='68875' id='14' is-fixed='true' is-scaled='1' param='C:/Users/Oscar Ko/Desktop/100-Days-of-Data-Projects/18-Cereal_Visualization/Spoon.png' type-v2='bitmap' w='15500' x='-2000' y='24250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{82603995-E9CC-4671-AD07-516E126CAD69}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[none:mfr:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0zzt9sl0qwiyyk1f1tle008a3y9j].[sum:cups:qk]' type='size' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{45FD6A47-1D5A-476B-807F-2534CF085351}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{07C2E7B4-17A1-4D84-8D4D-ED94511E5282}' />
+    </window>
+  </windows>
+</workbook>

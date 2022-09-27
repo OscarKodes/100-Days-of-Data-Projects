@@ -603,3 +603,17 @@ I aim to do at least one of the following each day:
     - Find free images of bowl and spoon for iconography
     
     - Format dashboard
+    
+---
+
+### Day 88-89 - Sep 26-27, 2022
+
+**Tasks Done**
+
+- Finish Cereal Dashboard
+
+    - Adjust layout
+    - Add title
+    - Add links and source
+    - Polish up the design
+

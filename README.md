@@ -618,3 +618,14 @@ I aim to do at least one of the following each day:
     - Polish up the design
     - https://public.tableau.com/app/profile/oscar1115/viz/WhichCerealsShouldIEat/CerealDashboard
 
+---
+
+### Day 90-92 - Sep 28-30, 2022
+
+**Tasks Done**
+
+- Subreddit AsianAmerican Text Analysis NLP
+
+    - Prepare the data by arranging all titles and comments into a single string
+    
+    - Arrange dataframe as post_id and title_and_comments

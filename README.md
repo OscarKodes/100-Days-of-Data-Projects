@@ -629,3 +629,23 @@ I aim to do at least one of the following each day:
     - Prepare the data by arranging all titles and comments into a single string
     
     - Arrange dataframe as post_id and title_and_comments
+
+---
+
+### Day 93 - Oct 1, 2022
+
+**Tasks Done**
+
+- Subreddit AsianAmerican Text Analysis NLP
+
+    - Text cleaning
+    - LDA topic analysis
+    - Experimenting with stop words and K clusters
+    
+- It seems the posts on this subreddit can be divided into four categories:
+
+    - Culture
+    - Movies
+    - Racism against Chinese
+    - Racism over time
+        - (Maybe there is a way to combine two clusters?)

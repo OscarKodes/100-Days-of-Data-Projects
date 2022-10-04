@@ -296,85 +296,99 @@ top_terms %>%
   coord_flip()
 
 
-##########################################################
-##########################################################
-##########################################################
-##########################################################
-##########################################################
-##########################################################
-##########################################################
 
-# 
-# # GAMMA -------------
-# 
-# # How much does each topic contribute to each document?
-# # --> Use GAMMA statistic
-# # (As opposed to how much each word contributes
-# # to each topic, which is beta)
-# 
-# lda_document_topics <- tidy(lda,
-#                                   matrix="gamma")
-# 
-# head(lda_document_topics)
-# tail(lda_document_topics)
-# 
-# # write.csv(lda_document_topics,
-# #           file = paste("(new)topic_gamma_match",
-# #                        k,
-# #                        ".csv",
-# #                        sep = ""))
-# 
-# # same as nrow() and ncol()
-# dim(lda_document_topics)
-# 
-# 
-# # Have each topic as a different column --------------
-# 
-# # Ex: topic1, topic2, topic3
-# # As opposed to one topic column
-# # NOTE: gamma values are to fill in the new columns
-# lda_document <- spread(lda_document_topics,
-#                              topic, # the col to spread
-#                              gamma) # fill in the new cols with gamma
-# dim(lda_document)
-# head(lda_document)
-# 
-# 
-# # Best Topic Match ----------------------------------
-# 
-# # create column for the topic that has the
-# # greatest contribution to that document
-# 
-# lda_document$max_topic <-
-#   colnames(lda_document[2:4])[apply(X=lda_document,
-#                                           MARGIN=1,
-#                                           FUN=which.max)]
-# 
-# 
-# # join tables together --------------------------------
-# 
-# dt1 <- data.table(lda_document,
-#                   key = "document")
-# dt2 <- data.table(df,
-#                   key = "doc_id")
-# 
-# merged <- dt1[dt2]
-# dim(merged)
-# colnames(merged)
-# 
-# 
-# # select only the columns you want to work with
-# analyze <- select(merged,
-#                          c(document,
-#                            text,
-#                            score,
-#                            num_comments,
-#                            url,
-#                            created))
-# head(analyze)
-# 
-# 
-# 
+
+# GAMMA -------------
+
+# How much does each topic contribute to each document?
+# --> Use GAMMA statistic
+# (As opposed to how much each word contributes
+# to each topic, which is beta)
+
+lda_document_topics <- tidy(lda,
+                            matrix="gamma")
+
+head(lda_document_topics)
+tail(lda_document_topics)
+
+# write.csv(lda_document_topics,
+#           file = paste("(new)topic_gamma_match",
+#                        k,
+#                        ".csv",
+#                        sep = ""))
+
+# same as nrow() and ncol()
+dim(lda_document_topics)
+
+
+# Have each topic as a different column --------------
+
+# Ex: topic1, topic2, topic3
+# As opposed to one topic column
+# NOTE: gamma values are to fill in the new columns
+lda_document <- spread(lda_document_topics,
+                             topic, # the col to spread
+                             gamma) # fill in the new cols with gamma
+dim(lda_document)
+head(lda_document)
+head(lda_document[2:5])
+
+
+# Best Topic Match ----------------------------------
+
+# create column for the topic that has the
+# greatest contribution to that document
+
+
+my_max <- function(row) {
+  
+  top_value = 0
+  top_column = 0
+  
+  for (i in 2:5) {
+    
+    if (row[i] > top_value) {
+      top_column = i
+      top_value = row[i]
+    }
+  }
+  
+  return (top_column)
+}
+
+
+lda_document$max_topics <-
+  colnames(lda_document)[apply(X=lda_document,
+                                          MARGIN=1,
+                                          FUN=my_max)]
+
+
+# join tables together --------------------------------
+
+dt1 <- data.table(lda_document,
+                  key = "document")
+dt2 <- data.table(df,
+                  key = "doc_id")
+
+merged <- dt1[dt2]
+dim(merged)
+colnames(merged)
+
+
+# select only the columns you want to work with
+analyze <- select(merged,
+                  "document",
+                  "1-culture"="1",
+                  "2-racsm_v_chinese"="2",
+                  "3-movies"="3",
+                  "4-racsm_in_time"="4",
+                  "max_topics")
+head(analyze, n = 10)
+
+unique(analyze$max_topics)
+
+
+
 # 
 # 
 # 

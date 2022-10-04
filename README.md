@@ -649,3 +649,16 @@ I aim to do at least one of the following each day:
     - Racism against Chinese
     - Racism over time
         - (Maybe there is a way to combine two clusters?)
+	
+---
+
+### Day 94:96 - Oct 2-4, 2022
+
+**Tasks Done**
+
+- Subreddit AsianAmerican Text Analysis NLP
+
+    - LDA topic analysis
+    - Arranged topics into a dataframe with identified topic names
+    - Fixed max topic function for correct max topics
+

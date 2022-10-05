@@ -389,90 +389,90 @@ unique(analyze$max_topics)
 
 
 
-# 
-# 
-# 
-# ###################################################
-# ###################################################
-# # Sentiment Analysis
-# 
-# # for sentiments
-# library(topicmodels)
-# sentiments
-# 
-# # textdata and nrc may need package installations
-# library("textdata")
-# get_sentiments("afinn")
-# get_sentiments("nrc")
-# get_sentiments("bing")
-# 
-# 
-# # convert csv data into a format
-# # the tidyverse library can work with
-# colnames(df)
-# 
-# tidy_prompts <- df %>%
-#   ungroup() %>%
-#   unnest_tokens(word, text)
-# 
-# # from the conversion above,
-# # we have a new column called "word"
-# summary(tidy_prompts)
-# 
-# head(tidy_prompts)
-# colnames(tidy_prompts)
-# 
-# # Get all the "joy" sentiment words
-# # from the nrc dictionary
-# nrc_sent <- get_sentiments("nrc") %>%
-#   filter(sentiment == "joy")
-# 
-# 
-# # --> Which words do top writing prompts express joy with -------------
-# # inner join nrc_sent with prompts
-# joy_words <- tidy_prompts %>%
-#             inner_join(nrc_sent) %>%
-#             dplyr::count(word, sort = TRUE) # important to specify dplyer's count
-# joy_words
-# 
-# 
-# # --> Difference of positive and negative words in each prompt ------
-# # ex: if one is lots of negative words, we get a negative score
-# # ex: if one is lots of positive words, we get a positive score
-# prompts_sentiment <- tidy_prompts %>%
-#   inner_join(get_sentiments("bing")) %>%
-#   dplyr::count(doc_id, sentiment) %>%
-#   spread(sentiment, n, fill = 0) %>%
-#   mutate(sentiment = positive - negative)
-# 
-# head(prompts_sentiment)
-# 
-# 
-# # # Get all bing sentiments ---------------------------------------
-# #
-# # write.csv(get_sentiments("bing"),
-# #           file = paste("bing_sentiments",
-# #                        k,
-# #                        ".csv",
-# #                        sep = ""))
-# 
-# 
-# # # Export CSV sentiment values ---------------------------------------
-# #
-# # write.csv(prompts_sentiment,
-# #           file = paste("prompts_sentiments",
-# #                        k,
-# #                        ".csv",
-# #                        sep = ""))
-# 
-# 
-# # visualize positive words vs negative words in prompt -------------
-# ggplot(prompts_sentiment, aes(negative, positive)) +
-#   geom_point(show.legend = FALSE,
-#              size = 15,
-#              shape = "square",
-#              alpha = 0.1)
-# 
-# # the mean sentiment analysis of all bowie lyrics together ---------
-# all_prompts_sentiment <- mean(prompts_sentiment$sentiment)
-# all_prompts_sentiment
+
+
+
+###################################################
+###################################################
+# Sentiment Analysis
+
+# for sentiments
+library(topicmodels)
+sentiments
+
+# textdata and nrc may need package installations
+library("textdata")
+get_sentiments("afinn")
+get_sentiments("nrc")
+get_sentiments("bing")
+
+
+# convert csv data into a format
+# the tidyverse library can work with
+colnames(df)
+
+tidy_prompts <- df %>%
+  ungroup() %>%
+  unnest_tokens(word, text)
+
+# from the conversion above,
+# we have a new column called "word"
+summary(tidy_prompts)
+
+head(tidy_prompts)
+colnames(tidy_prompts)
+
+# Get all the "joy" sentiment words
+# from the nrc dictionary
+nrc_sent <- get_sentiments("nrc") %>%
+  filter(sentiment == "joy")
+
+
+# --> Which words does /r/AsianAmerican express joy with -------------
+# inner join nrc_sent with prompts
+joy_words <- tidy_prompts %>%
+            inner_join(nrc_sent) %>%
+            dplyr::count(word, sort = TRUE) # important to specify dplyer's count
+joy_words
+
+
+# --> Difference of positive and negative words in each prompt ------
+# ex: if one is lots of negative words, we get a negative score
+# ex: if one is lots of positive words, we get a positive score
+prompts_sentiment <- tidy_prompts %>%
+  inner_join(get_sentiments("bing")) %>%
+  dplyr::count(doc_id, sentiment) %>%
+  spread(sentiment, n, fill = 0) %>%
+  mutate(sentiment = positive - negative)
+
+head(prompts_sentiment)
+
+
+# # Get all bing sentiments ---------------------------------------
+#
+# write.csv(get_sentiments("bing"),
+#           file = paste("bing_sentiments",
+#                        k,
+#                        ".csv",
+#                        sep = ""))
+
+
+# # Export CSV sentiment values ---------------------------------------
+#
+# write.csv(prompts_sentiment,
+#           file = paste("prompts_sentiments",
+#                        k,
+#                        ".csv",
+#                        sep = ""))
+
+
+# visualize positive words vs negative words in prompt -------------
+ggplot(prompts_sentiment, aes(negative, positive)) +
+  geom_point(show.legend = FALSE,
+             size = 15,
+             shape = "square",
+             alpha = 0.1)
+
+# the mean sentiment analysis of all bowie lyrics together ---------
+all_prompts_sentiment <- mean(prompts_sentiment$sentiment)
+all_prompts_sentiment

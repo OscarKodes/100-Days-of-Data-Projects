@@ -662,3 +662,32 @@ I aim to do at least one of the following each day:
     - Arranged topics into a dataframe with identified topic names
     - Fixed max topic function for correct max topics
 
+---
+
+### Day 97 - Oct 5, 2022
+
+**Tasks Done**
+
+- What words do the top 999 posts & their comments on /r/AsianAmerican use to express joy with?
+
+**The top 15 "joy" words & their frequency:**
+1             good 806
+2             love 531
+3             hope 414
+4           pretty 386
+5             kind 321
+6             food 303
+7             glad 225
+8            found 191
+9            happy 190
+10            true 181
+11           money 177
+12          friend 172
+13           proud 172
+14            vote 167
+15             fun 150
+
+- What is the average sentiment of the posts and comments?
+    - About -5.19, which is pretty negative.
+    - This makes sense because as seen with the topic analysis, many posts and comments discuss injustice and racism against AsianAmericans.
+    - But their are plenty of positive posts, which are likely to be associated with movies and culture topics.

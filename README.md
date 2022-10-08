@@ -707,3 +707,14 @@ I aim to do at least one of the following each day:
     - About -5.19, which is pretty negative.
     - This makes sense because as seen with the topic analysis, many posts and comments discuss injustice and racism against AsianAmericans.
     - But their are plenty of positive posts, which are likely to be associated with movies and culture topics.
+
+---
+
+### Day 98-100 - Oct 6-8, 2022
+
+**Tasks Done**
+
+- Finish SQL project
+- "What and Where are the World's Oldest Businesses"
+    - Datacamp SQL guided project
+- Plan for future projects
